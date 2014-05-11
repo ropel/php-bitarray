@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="BitArray" version="2.5.0-DEV&#10;">
   <partials/>
-  <file path="BitArray.php" generated-path="BitArray.html" hash="3c6d679fa80e721083ae7c31b07c23db" package="global">
+  <file path="BitArray.php" generated-path="BitArray.html" hash="fdcf0c8f94935bbde0f74ba9221c38f1" package="global">
     <docblock line="0">
       <description>chdemko\BitArray\BitArray class</description>
       <long-description></long-description>
       <tag name="author" line="0" description="Christophe Demko" link="mailto:chdemko@gmail.com"/>
-      <tag name="copyright" line="0" description="Copyright (C) 2012-2014 Christophe Demko. All rights reserved."/>
+      <tag name="copyright" line="0" description="Copyright (C) 2014 Christophe Demko. All rights reserved."/>
       <tag name="license" line="0" description="http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.html The CeCILL B license&#10;This file is part of the php-bitarray package https://github.com/chdemko/php-bitarray"/>
     </docblock>
     <class final="false" abstract="false" namespace="chdemko\BitArray" line="24" package="BitArray">
@@ -385,14 +385,14 @@
         </argument>
       </method>
     </class>
-    <source>eJzlWG1vEzkQ/pz8ijnUazbQJik66RA0HKGHTj0hIdGCTmp7kbtxsoaNved1UsoBv/3G9tr7mjahPVQEH6izHs/LM4/HY+//lkRJu92/f78N9yGMJnT+Xpw+Z2okJbn0AwhjkqYooqWekYWKhAT97yCSLFUiiSj8rpfCfqbj2WxOWNwLxfypWROK5FKyWaRwjR8GB114ONh7uIv//VLT1YNRHIORTEHSlMolnfScEzELKU+pdiJSKnnc719cXPRCGrI47jE+FX0jEdK0/9IOxgf04PDly93n47d7u5T3IjWP4Rit2e/wHDKdmYnjiKUwZTEF/JsQqUBMQaE8QrZ7zhQxyCQkfE9m1DiRohczpqLFuQ68n0HRL8qj4j7i3ccQEVNJa5gDJ3Oaolba9qOa0BOfMrsGHUMDPkHOJ3Dy+quZSRkCoTHb6w16A+OMSa2XBDZPYjqnHDE/NV9GIWKY7sDpgVhwRc5jiuNDRSVRQo5mM0lnROlvf6aCH1HJSMw+arH2v+2W9rKlDS+JJUyqJOMzgDd8QmV8qccToogWsoLOQ+tgS3vYSiRbog3Y0qIYe10t44rOKI6P2Efq8oSQgAV9Pe0pri1qP5BUfyfA6UWuzGmfsSXloNfk6pElZF50x+gEwzKPcHlJs0dC0VDRCUwXPFRMcBiPQ8ERvEWoAqO0224hvq0thSzdfWrMDCFAw10XiJ/UqOEkrh5LmmBMwb3Twb0dCCmLg6KCPjzqdnHh51Ug+BimUsyBcBfo9QhU8lJJi6RqIXnOV4BRyd41cC3OcedifEThHw+Z9vHQulGCLDNW1J/Nbxa63gKa5vXYsxkMPh+O8hW4egKh203fAoXMcOD9cezRVQOpUcLCeFYQ7Roqiek0pQplB/annNgx/pgKBCqMIF8DJIWtJYkX2pCx1GJTnPef7Der5tMQ9mB/H5yJn+GRNmFSka3LZ2A4HMKvRRU6BMvxE0t/L67pfIZehhESAC2ZQIq+eyPZigcP9DfzqWr2JzQ78MFsatSozNJr1m7ANFN5bNmsU82V0y03GDWK/2/MOjKGgsz8VaxCiZhyL9ltYlGOov7oCbEPGd6mroFPVplbVvFJNntmMtYZdO4Y2+4avd7hoX0FrfS0Jov5i02UmOChZHbxNyCXbigC40K5cqc0nj5+XCpsWmg8odq/bEWtmMeCU7ubVhw+S8Ema/laPJS11qB8FteP28LEDuxVPTumqTLnIv2A/a/uVPVBaQ7XCf1w1dGaccK0F3Zcj+pciJiiMiOE/YOKqvlbJ1Kr/YV2MHVcLCeFpWOmj41sDra3vX9PkdvF37j58qajAsYf1GJR8BR0Zfh2cKhIigvUe3rIcYZNRnK20P3wiw8hTQwY4D5Zl2C+wASe62MdEpEyhY2h9yrG3hn/qAgndVxrNH+N0CMuFdxNCbE4NmbHV5Ms9ECHjpUEi0aRkI0FBtMHQbVMdrNa02rRGC9JmXYLl97vKwELOh6wTJtHbD3AOs5ykSlHt86UXNKzxHYscAVdmqvH3STRUU6inbw/24hMW9Zbd9Uo0eZJfoTWGr0C4awKd4hV6ZjNduHTKgYaCjoOfr3+bfhylYGb8byS0xvQ/A1P6S0cDxXha1j7Gm8AbE4LbH2rE5pCSDgXJqYFL9XX9UloAqrUsgK4VdNBp9l0p3qMvrYh1feHi9UDc/xVW8hei8qH3upzzD2EUOOQOH+H9/m6SyTrl9y7gtk26WZ+vSs8u+StiNU8hJOz65vrQhANzbVVdaL3060dIQUEiX3PKvdqgi+pVAXoQAncRauuNa5dtbcRwK5LPxdy3VIa2oH2tZaE9To8JbI7jkM2M1Zq8PCesVPEsXtT0HURvQHKhcJYvRbhpWivU76MuFRY0YaGzL12KCHr4LunwHy0GcQzqtzCoP5C46cMErWmXrjXylUPfvXLyXHOBdMvhBFhvESrdbwmSRJf5uY9O/COO8MmwbDD3HfzBBZJwTI+ME0Fu0b/Km670pnlTrMvUD/Pzhp2lRaoYPVKwgVD1zCZBAtphJWwAS93iuR42dt89rBwC+hu0hq5AxS3MP1nQeKvKNsmUa9k4F008dTbHvuCOiw+NeS5uDar66S1sVVZ3aaYFsh8LrwG+Gxn7xWVfN+wa2mEu7ErGfHJj8smDP67pNP2naXTX+IHLk4Y/HdJp7/vGJ0+t/8DlHL5EA==</source>
+    <source>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</source>
   </file>
-  <file path="Iterator.php" generated-path="Iterator.html" hash="54e50f38d25788c150538df54a08ba9f" package="global">
+  <file path="Iterator.php" generated-path="Iterator.html" hash="cce1a309c52a8cee48d65fed131cdd0c" package="global">
     <docblock line="0">
       <description>chdemko\BitArray\Iterator class</description>
       <long-description></long-description>
       <tag name="author" line="0" description="Christophe Demko" link="mailto:chdemko@gmail.com"/>
-      <tag name="copyright" line="0" description="Copyright (C) 2012-2014 Christophe Demko. All rights reserved."/>
+      <tag name="copyright" line="0" description="Copyright (C) 2014 Christophe Demko. All rights reserved."/>
       <tag name="license" line="0" description="http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.html The CeCILL B license&#10;This file is part of the php-bitarray package https://github.com/chdemko/php-bitarray"/>
     </docblock>
     <class final="false" abstract="false" namespace="chdemko\BitArray" line="24" package="BitArray">
@@ -406,7 +406,7 @@
         <tag name="package" line="24" description="BitArray"/>
         <tag name="since" line="24" description="1.0.0"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="chdemko\BitArray" line="31" package="BitArray">
+      <property static="false" visibility="private" namespace="chdemko\BitArray" line="31" package="BitArray">
         <name>$index</name>
         <full_name>\chdemko\BitArray\Iterator::index</full_name>
         <default></default>
@@ -419,7 +419,7 @@
           <tag name="since" line="31" description="1.0.0"/>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="chdemko\BitArray" line="38" package="BitArray">
+      <property static="false" visibility="private" namespace="chdemko\BitArray" line="38" package="BitArray">
         <name>$bits</name>
         <full_name>\chdemko\BitArray\Iterator::bits</full_name>
         <default></default>
@@ -510,7 +510,7 @@
         </docblock>
       </method>
     </class>
-    <source>eJytlE+P2jAQxc/kU8xhD8CKBFY9tXS7C70g0Uu16qVbIWMGYpHYke3wR9V+944dnGYJ2rJSOYCxx29+fs/J+EuRFlGU9PsR9IGnK8y36nki7KPW7Pg8s6iZVRp4xoyhElf1wEqb0pz7TFMtjFVFivDVbYXxSeNhkzORxVzl934PV8VRi01qaU897E57cDcc3Q3o60NLK4bHLANfaUCjQb3DVRwgMsFRGnQQqbXFxyTZ7/cxRy6yLBZyrRJfwdEk82qwmOJ0Np8PJosfowHKOLV5Bk/UrZqHCZw0Ty2eUmFgLTIE+i2YtqDWYKmeLBsshWXOIlrgW7ZBD2GIYiNsWi7dwZOTFUmznoQT8juhI5KnGlueg2Q5GlLFqB61ij7VkYWEgi0BB0JpWDCCLHBujeJhPPQYPtRaAUReZJijJLfr4KPfUcd16jiJHatCF9LiBmk8kys8uLVqPbSoOnRci06hlUVucQU3wlUTeVuwPjuQTeZqQVfc1JsqaawuueOuNSg4lr/q4fc1DHq7XbmkWwHrUnIrlITFgocu3VrSK/aiDpnVubF0bQb3vsfnwFhPa9yTDd0eTb00yL/7aX+56jis8v/XQhsLWCXzl1WjLbUE2Cmxet8JAsIrXJ8N8Q5bYL6NA+Gl1oQAWzy2MXJxoET803Sx7how2hCoTrJNuH+D7VhW4lVoZ5XXwJ22XgZ0If9swv46o/2mdpSk0numVyFYiYf/mqvTu5Tq7e0ZzDRFvjUg1rUfhTLCa9CLjrxpdg48S6UyZPJ9SF7rjUxhDFyV5GrDx+rReIn+AHAA7dY=</source>
+    <source>eJytlE+P2jAQxc/kU8xhD8CKBKqeWrrdhV6Q6KVa7aVbIWMGYpHYke3wR9V+944dnGYJ2rJSuWDsmTc/v5cw/lqkRRQl/X4EfeDpCvOtep4I+6A1Oz7PLGpmlQaeMWOoxFXds9KmtOc+01QLY1WRInxzrTA+adxvciaymKv8zvdwVRy12KSWeupld9qDD8PRx5ZMDA9ZBr7IgEaDeoerOMzPBEdp0M1PrS0+Jcl+v485cpFlsZBrlfgKjiaZV4vFFKez+XwwWTyNBijj1OYZPNK0ah8mcNI8jXhMhYG1yBDou2DaglqDpXpya7AUljl36IBv2QY9hCGKjbBpuXR3Tk4uJM16Ek7I6oSuSHZqbNkNkuVoSBWjetUq+lynFcIJtgQcCKXhwAiywLk1iofx0GP4PGsFEHmRYY6S3K4zj35HHTep4yR2rMpbSIsbpPVMrvDgzqrzMKKa0HEjOoUWO2YRboSrJe62XH1zIJPMlXKutKk2VdJYXXLHXCtQaCx/NcH3Ncx5e1i5pCcC1qXkVigJiwUPU7q1pFfsRR0yqnNj6ZEZ3PkZXwJjva1xTyZ0e7T10iD/4bf9g1VHYZX/vRbaWMAqlb+sGm2pJcBOidX7bhAQXuH6ZIh32ALzYxwIL7UmBNjisY2RiwOuwL9JF+uuAaOGQHWSbcL9G2zHshKvQjurvAbu1HoZ0IX8swn764z2u9pRkkrvmV6FYCUe/muuTu9Sqre3ZzDTFPnWgFjXfhTKCK9Bf3LkTXNy4FkqlSGT70PyWm9kCmPgqiRXGz5Wr8ZL9Acuf+tG</source>
   </file>
   <package name="BitArray" full_name="BitArray"/>
   <package name="global" full_name="global"/>
