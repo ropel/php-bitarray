@@ -71,9 +71,9 @@
 <li class="method public "><a href="#method_applyXor" title="applyXor() :: Xor with an another bit array"><span class="description">Xor with an another bit array</span><pre>applyXor()</pre></a></li>
 <li class="method public "><a href="#method_count" title="count() :: Return the size"><span class="description">Return the size</span><pre>count()</pre></a></li>
 <li class="method public "><a href="#method_fromInteger" title="fromInteger() :: Create a new BitArray from an integer"><span class="description">Create a new BitArray from an integer</span><pre>fromInteger()</pre></a></li>
-<li class="method public "><a href="#method_fromIterable" title="fromIterable() :: Create a new BitArray from an iterable"><span class="description">Create a new BitArray from an iterable</span><pre>fromIterable()</pre></a></li>
 <li class="method public "><a href="#method_fromJson" title="fromJson() :: Create a new BitArray from json"><span class="description">Create a new BitArray from json</span><pre>fromJson()</pre></a></li>
 <li class="method public "><a href="#method_fromString" title="fromString() :: Create a new BitArray from a bit string"><span class="description">Create a new BitArray from a bit string</span><pre>fromString()</pre></a></li>
+<li class="method public "><a href="#method_fromTraversable" title="fromTraversable() :: Create a new BitArray from a traversable"><span class="description">Create a new BitArray from a traversable</span><pre>fromTraversable()</pre></a></li>
 <li class="method public "><a href="#method_getIterator" title="getIterator() :: Get an iterator"><span class="description">Get an iterator</span><pre>getIterator()</pre></a></li>
 <li class="method public "><a href="#method_jsonSerialize" title="jsonSerialize() :: Serialize the object"><span class="description">Serialize the object</span><pre>jsonSerialize()</pre></a></li>
 <li class="method public "><a href="#method_offsetExists" title="offsetExists() :: Test the existence of an index"><span class="description">Test the existence of an index</span><pre>offsetExists()</pre></a></li>
@@ -265,25 +265,6 @@
 <code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
 </div></div>
 </div>
-<a id="method_fromIterable"></a><div class="element clickable method public method_fromIterable" data-toggle="collapse" data-target=".method_fromIterable .collapse" title="public">
-<h2>Create a new BitArray from an iterable</h2>
-<pre>fromIterable(\chdemko\BitArray\iterable $iterable) : \chdemko\BitArray\BitArray</pre>
-<div class="labels"><span class="label">Static</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr></table>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$iterable</h4>
-<code>\chdemko\BitArray\iterable</code><p>An iterable and countable</p></div>
-<h3>Returns</h3>
-<div class="subelement response">
-<code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
-</div></div>
-</div>
 <a id="method_fromJson"></a><div class="element clickable method public method_fromJson" data-toggle="collapse" data-target=".method_fromJson .collapse" title="public">
 <h2>Create a new BitArray from json</h2>
 <pre>fromJson(string $json) : \chdemko\BitArray\BitArray</pre>
@@ -317,6 +298,25 @@
 <div class="subelement argument">
 <h4>$string</h4>
 <code>string</code><p>A bit string</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
+</div></div>
+</div>
+<a id="method_fromTraversable"></a><div class="element clickable method public method_fromTraversable" data-toggle="collapse" data-target=".method_fromTraversable .collapse" title="public">
+<h2>Create a new BitArray from a traversable</h2>
+<pre>fromTraversable(\Traversable $traversable) : \chdemko\BitArray\BitArray</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$traversable</h4>
+<code>\Traversable</code><p>A traversable and countable</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
@@ -489,7 +489,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.5.0-DEV
 </a> and<br>
-            generated on 2014-05-11T18:30:41Z.<br></footer></div>
+            generated on 2014-05-15T20:39:03Z.<br></footer></div>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="BitArray" version="2.5.0-DEV&#10;">
   <partials/>
-  <file path="BitArray.php" generated-path="BitArray.html" hash="fdcf0c8f94935bbde0f74ba9221c38f1" package="global">
+  <file path="BitArray.php" generated-path="BitArray.html" hash="1b9e3949418a640feaa016658f271bbb" package="global">
     <docblock line="0">
       <description>chdemko\BitArray\BitArray class</description>
       <long-description></long-description>
@@ -87,13 +87,13 @@
         </argument>
       </method>
       <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="76" package="BitArray">
-        <name>fromIterable</name>
-        <full_name>\chdemko\BitArray\BitArray::fromIterable()</full_name>
+        <name>fromTraversable</name>
+        <full_name>\chdemko\BitArray\BitArray::fromTraversable()</full_name>
         <docblock line="76">
-          <description>Create a new BitArray from an iterable</description>
+          <description>Create a new BitArray from a traversable</description>
           <long-description></long-description>
-          <tag name="param" line="76" description="&lt;p&gt;An iterable and countable&lt;/p&gt;" type="\chdemko\BitArray\iterable" variable="$iterable">
-            <type>\chdemko\BitArray\iterable</type>
+          <tag name="param" line="76" description="&lt;p&gt;A traversable and countable&lt;/p&gt;" type="\Traversable" variable="$traversable">
+            <type>\Traversable</type>
           </tag>
           <tag name="return" line="76" description="A new BitArray" type="\chdemko\BitArray\BitArray">
             <type>\chdemko\BitArray\BitArray</type>
@@ -101,9 +101,9 @@
           <tag name="since" line="76" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
-          <name>$iterable</name>
+          <name>$traversable</name>
           <default></default>
-          <type>\chdemko\BitArray\iterable</type>
+          <type>\Traversable</type>
         </argument>
       </method>
       <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="115" package="BitArray">
@@ -190,8 +190,8 @@
           <tag name="return" line="193" description="The truth value" type="boolean">
             <type>boolean</type>
           </tag>
-          <tag name="throw" line="193" description="Argument index must be an positive integer lesser than the size" type="\InvalidArgumentException">
-            <type>\InvalidArgumentException</type>
+          <tag name="throw" line="193" description="Argument index must be an positive integer lesser than the size" type="\OutOfRangeException">
+            <type>\OutOfRangeException</type>
           </tag>
           <tag name="since" line="193" description="1.0.0"/>
         </docblock>
@@ -216,8 +216,8 @@
           <tag name="return" line="217" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throw" line="217" description="Argument index must be an positive integer lesser than the size" type="\InvalidArgumentException">
-            <type>\InvalidArgumentException</type>
+          <tag name="throw" line="217" description="Argument index must be an positive integer lesser than the size" type="\OutOfRangeException">
+            <type>\OutOfRangeException</type>
           </tag>
           <tag name="since" line="217" description="1.0.0"/>
         </docblock>
@@ -385,7 +385,7 @@
         </argument>
       </method>
     </class>
-    <source>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</source>
+    <source>eJzlWG1v2zYQ/mz/iluRxXKb2M4wYEUbd3WzYshQIECTFgOSzKBl2mInk5pEO03X9rfvSIoU9eLESbMiRfMlsnS8l+ce3h25/2sSJe12/+HDNjyEMJrSxd/i7AWTozQll+4BwphkGYooqedkKSORgvo7iFKWSZFEFH5TS2E/1/F8viAs7oVi8UyvCUVymbJ5JHGNewwOuvDTYO/nmpoejOIYtFAGKc1ouqLTnrUfs5DyjCr7kZTJk37/4uKiF9KQxXGP8Znoa4mQZv1X5mF8QA8OX73afTF+u7dLeS+SixhO0Jp5Dy8g15mbOIlYBjMWU8D/CUkliBlIlEe0didMEg1KQsK/yZxqJzL0Ys5ktJyomPs5Cn1fHhX3Eeo+hohwprQGN3CyoBlqpW33VBN66rJl1qBjaMDlxvoEVl691V8yhkAozPZ6g95AO6Oz6iSBLZKYLihHzM/0m1GIGGY7cHYgllySSUzx+VDSlEiRjubzlM6JVO/+yAQ/pikjMfugxNr/tlvKy5YyvCKGK5lMGZ8DvOFTmsaX6nlKJFFCRtB6aBxsKQ9bScpWaAO2lCjGXlfLuKRzis/H7AO1eUJIwIC+mfYM1/raD1Kq3hPg9KJQZrXP2YpyUGsK9cgSsvDd0TpBs8whXF7S7JGQNJR0CrMlDyUTHMbjUHAEbxnKQCvttluIb2tLIkt3n2kzQwjQcNcG4j4q1PAjrh6nNMGYggdngwc7EFIWB76CPjzudnHhp3UguBhmqVgA4TbQ6xGo5KWSlpTKZcoLvgKMSvaugWs5wZ2L8RGJ/xxkysdD40YJstyYrz//foPQQaZkRdNME70W/dlJ8RUhkP6vkb8UMZxCaDfWVwDEcyzw/bJ0UmUEuVICR/tXlu5qeonZLKMSxQfmZzo1z/hjJhC8MILSMiAZbK1IvFTmtL0Wm6GIe2XeGU0fh7AH+/tgrfwIj5UVnaF8XfEFhsMh/OKrUIEY6p+aXeHEFcvP0dEwQl6gJR2L774zkq949Ei906+qZn9AswMXzE2NapV5qvXamxBQFSRTTev8s1V2yz6MGsX/N5Yda0NBbv4qbqFETLmT7DYRqUBRvXSE2Iccb13uwCWrzC2j+DT/eq4z1hl07hnb7hu93mEvv4JW6rMii/6Ps5WYYq/Su/grkEvNGYF2oVzQMxrPnjypFjklN55S5WK+qFbmY8Gp2VBr2tJKsOlG7vrtWmkNyl263oi9DzuwV/XshGZSd0z6HidjNcOqFqrb7pS+v6rp5rTQg4d5rkc1ESKmqEwL4WQho2oKN4nUaH+pHMwsHct5YdmYqf6Rf4PtbeffM6S3/xv3XzGOVMD4nRosPE9BFYevB4eMUnGhuvvRUh7NXhM+py/fhzTROOAkPl+qudl4A4sl5m6iGjwkImMSp0XnUIwDNf6TEX5UIW0wETaijpBUINcFxEDYmBhXS/KoAxU11hEsGT4XG8sLZg6CapHs5pWm1aIxnpxy7QYptdubsAo6DqtckQNrM6w61qjPj+M750ch6bhhRhW4giTNNePeUee4oM5OMZPdiEJbxlt76iiR5WnRNmvDnUczo8I2rioJ869d+LiOd5p4lnm3178Nn68ycGt2V9L5BeR+wzN6B62gInwNV1/j2M8WPlHfqlxmEBLOhY5pyUu1dHP+6YAqxcvDtWo66DSb7lRb5msTUn1r2FgdMCe32j3mLFRucOt7lr0OodohMXmHp/q6SyQfj+ztgt4x2c38euddvhRjh9E8hNPz62dpL4iGWdqoOlVb6c56hocgMbda5blMcJzipAcdSIG7aN0pxk6n5vABOGGpS0OuJkhNO1C+1pKw2TQnRX6kscjmxkrDHB4rdnwcu18KuqqfX4CyVxOrpyA8A+11ymcPmwoj2jB8qWKTX/vVwbcXgsXTzSCeU2kXBvV7GvdJI1Eb4IW9s1x37Vc/i5wUXNBTQhgRxku02sRrkiTxZWHesQOPtHMcDTQ79PG2SKBPCpbzgSkqmDXql7/tSu3KNrLPUG9l5w27SglUsDpK4YKha5hMgoU0wkrYgJftIgVe5vCe3yPcAbquyRxyLHdsantm01RkGyhuYfrPksS3KNs6UUdp4FzU8dQnHnOPOvRvFopcXJvVTdLaOKWsn1D09KNfe4d/l+38eqKS76sGlnVwe1NLI9yNU8mIT79fNmHw3ySdtu8tnf4U33FxwuC/STr9dc/o9Kn9H7Cj+qk=</source>
   </file>
   <file path="Iterator.php" generated-path="Iterator.html" hash="cce1a309c52a8cee48d65fed131cdd0c" package="global">
     <docblock line="0">
