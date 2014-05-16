@@ -64,12 +64,13 @@
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
 <li class="method public "><a href="#method___clone" title="__clone() :: Clone a bitarray"><span class="description">Clone a bitarray</span><pre>__clone()</pre></a></li>
+<li class="method public "><a href="#method___get" title="__get() :: Magic get method"><span class="description">Magic get method</span><pre>__get()</pre></a></li>
 <li class="method public "><a href="#method___toString" title="__toString() :: Convert the object to a string"><span class="description">Convert the object to a string</span><pre>__toString()</pre></a></li>
 <li class="method public "><a href="#method_applyAnd" title="applyAnd() :: And with an another bit array"><span class="description">And with an another bit array</span><pre>applyAnd()</pre></a></li>
 <li class="method public "><a href="#method_applyComplement" title="applyComplement() :: Complement the bit array"><span class="description">Complement the bit array</span><pre>applyComplement()</pre></a></li>
 <li class="method public "><a href="#method_applyOr" title="applyOr() :: Or with an another bit array"><span class="description">Or with an another bit array</span><pre>applyOr()</pre></a></li>
 <li class="method public "><a href="#method_applyXor" title="applyXor() :: Xor with an another bit array"><span class="description">Xor with an another bit array</span><pre>applyXor()</pre></a></li>
-<li class="method public "><a href="#method_count" title="count() :: Return the size"><span class="description">Return the size</span><pre>count()</pre></a></li>
+<li class="method public "><a href="#method_count" title="count() :: Return the number of true bits"><span class="description">Return the number of true bits</span><pre>count()</pre></a></li>
 <li class="method public "><a href="#method_fromInteger" title="fromInteger() :: Create a new BitArray from an integer"><span class="description">Create a new BitArray from an integer</span><pre>fromInteger()</pre></a></li>
 <li class="method public "><a href="#method_fromJson" title="fromJson() :: Create a new BitArray from json"><span class="description">Create a new BitArray from json</span><pre>fromJson()</pre></a></li>
 <li class="method public "><a href="#method_fromString" title="fromString() :: Create a new BitArray from a bit string"><span class="description">Create a new BitArray from a bit string</span><pre>fromString()</pre></a></li>
@@ -80,6 +81,7 @@
 <li class="method public "><a href="#method_offsetGet" title="offsetGet() :: Get the truth value for an index"><span class="description">Get the truth value for an index</span><pre>offsetGet()</pre></a></li>
 <li class="method public "><a href="#method_offsetSet" title="offsetSet() :: Set the truth value for an index"><span class="description">Set the truth value for an index</span><pre>offsetSet()</pre></a></li>
 <li class="method public "><a href="#method_offsetUnset" title="offsetUnset() :: Unset the existence of an index"><span class="description">Unset the existence of an index</span><pre>offsetUnset()</pre></a></li>
+<li class="method public "><a href="#method_size" title="size() :: Return the size"><span class="description">Return the size</span><pre>size()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header protected">» Protected
@@ -91,6 +93,7 @@
 </li>
 <li class="nav-header private">» Private
                     <ul>
+<li class="property private "><a href="#property_count" title="$count() :: "><span class="description"></span><pre>$count</pre></a></li>
 <li class="property private "><a href="#property_data" title="$data() :: "><span class="description">Underlying data</span><pre>$data</pre></a></li>
 <li class="property private "><a href="#property_size" title="$size() :: "><span class="description">Size of the bit array</span><pre>$size</pre></a></li>
 </ul>
@@ -136,6 +139,30 @@
 <th>since</th>
 <td>1.0.0</td>
 </tr></table>
+</div></div>
+</div>
+<a id="method___get"></a><div class="element clickable method public method___get" data-toggle="collapse" data-target=".method___get .collapse" title="public">
+<h2>Magic get method</h2>
+<pre>__get(string $property) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code><p>The property</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\RuntimeException</code></th>
+<td>If the property does not exist</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The value associated to the property</div>
 </div></div>
 </div>
 <a id="method___toString"></a><div class="element clickable method public method___toString" data-toggle="collapse" data-target=".method___toString .collapse" title="public">
@@ -232,7 +259,7 @@
 </div></div>
 </div>
 <a id="method_count"></a><div class="element clickable method public method_count" data-toggle="collapse" data-target=".method_count .collapse" title="public">
-<h2>Return the size</h2>
+<h2>Return the number of true bits</h2>
 <pre>count() : integer</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -243,7 +270,7 @@
 </tr></table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>integer</code>The size</div>
+<code>integer</code>The number of true bits</div>
 </div></div>
 </div>
 <a id="method_fromInteger"></a><div class="element clickable method public method_fromInteger" data-toggle="collapse" data-target=".method_fromInteger .collapse" title="public">
@@ -431,6 +458,21 @@
 <table class="table table-bordered"></table>
 </div></div>
 </div>
+<a id="method_size"></a><div class="element clickable method public method_size" data-toggle="collapse" data-target=".method_size .collapse" title="public">
+<h2>Return the size</h2>
+<pre>size() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>The size</div>
+</div></div>
+</div>
 <a id="method___construct"></a><div class="element clickable method protected method___construct" data-toggle="collapse" data-target=".method___construct .collapse" title="protected">
 <h2>Create a new bit array of the given size</h2>
 <pre>__construct(integer $size) </pre>
@@ -449,6 +491,16 @@
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_count"> </a><div class="element clickable property private property_count" data-toggle="collapse" data-target=".property_count .collapse" title="private">
+<h2>$count</h2>
+<pre>$count </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array(0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8)</code></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_data"> </a><div class="element clickable property private property_data" data-toggle="collapse" data-target=".property_data .collapse" title="private">
 <h2>Underlying data</h2>
 <pre>$data : string</pre>
@@ -489,7 +541,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.5.0-DEV
 </a> and<br>
-            generated on 2014-05-15T20:39:03Z.<br></footer></div>
+            generated on 2014-05-16T14:49:00Z.<br></footer></div>
 </div>
 </body>
 </html>
