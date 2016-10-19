@@ -127,7 +127,7 @@
     </class>
     <source>eJytlE9vGjEQxc/sp5hDDkDELuTQQ0tpAr0g0UsV5dJUyJiBtdi1V7aXP63y3Ts2eLthUUqkcgBjz7z5+b2F4ZciLaIo6XYj6AJPl5hv1PNY2Aet2eF5alEzqzTwjBlDJa7qnpU2pT33mqRaGKuKFOGra4XhSeN+nTORxVzlI9/DVXHQYp1a6qmW7UkH7vqDux69fWhoxfCQZeArDWg0qLe4jANEJjhKgw4itbb4mCS73S7myEWWxUKuVOIrOJpkdlzMJziZzma98fxp0EMZpzbP4JGmHfdhDCfN04jHVBhYiQyBPgumLagVWKony3oLYZmziA74hq3RQxiiWAublgt38eRkRVKvJ+GE/E7oiuSpxobnIFmOhlQxqlaNok9VZCGhYEvAgVAaDowgC5xbg7gf9z2GD7VSAJEXGeYoye0q+Oh31HKTWk5iy46hC2lxjbSeyiXu3dnxPIw4Tmi5Ea1Ciy2zCDfC1RJ3U666OZBJ5ko5V1pXmyhprC65Y64UKDSWv5rg+2rmvD2sXNATAatSciuUhPmchyntStIrdqIWGdW6sfTI9EZ+xufAWG1r3JEJ7Q5tvdTIv/tt/2BVUVjlv6+ENhbwmMpfVo221BJgq8TyfTcICK9wfTLE22+A+TEOhJdaEwJs8NDEyMUel+B/SRfrrgGjhkB1kq3D/Rtsy7ISr0I7q7wG7tR6GdCF/KMO+/OM9pvaUpJK75hehmAl7v9rrk7vUqq3t2cwkxT5xoBYVX4UygivQX9y5E19cuBZKJUhk+9D8lpvZArDuoO9kRG/0MO+RH8A2Krr5g==</source>
   </file>
-  <file path="BitArray.php" generated-path="BitArray.html" hash="82b4919fe555df06bfd37118952c3980" package="Default">
+  <file path="BitArray.php" generated-path="BitArray.html" hash="b887f4f47c801c658dfd21acad90f37b" package="Default">
     <docblock line="0">
       <description>chdemko\BitArray\BitArray class</description>
       <long-description></long-description>
@@ -165,7 +165,7 @@
       <property static="true" visibility="private" namespace="chdemko\BitArray" line="51" package="BitArray">
         <name>$restrict</name>
         <full_name>\chdemko\BitArray\BitArray::restrict</full_name>
-        <default>array(1 &lt;&lt; 0 | 1 &lt;&lt; 1 | 1 &lt;&lt; 2 | 1 &lt;&lt; 3 | 1 &lt;&lt; 4 | 1 &lt;&lt; 5 | 1 &lt;&lt; 6 | 1 &lt;&lt; 7, 1 &lt;&lt; 0, 1 &lt;&lt; 0 | 1 &lt;&lt; 1, 1 &lt;&lt; 0 | 1 &lt;&lt; 1 | 1 &lt;&lt; 2, 1 &lt;&lt; 0 | 1 &lt;&lt; 1 | 1 &lt;&lt; 2 | 1 &lt;&lt; 3, 1 &lt;&lt; 0 | 1 &lt;&lt; 1 | 1 &lt;&lt; 2 | 1 &lt;&lt; 3 | 1 &lt;&lt; 4, 1 &lt;&lt; 0 | 1 &lt;&lt; 1 | 1 &lt;&lt; 2 | 1 &lt;&lt; 3 | 1 &lt;&lt; 4 | 1 &lt;&lt; 5, 1 &lt;&lt; 0 | 1 &lt;&lt; 1 | 1 &lt;&lt; 2 | 1 &lt;&lt; 3 | 1 &lt;&lt; 4 | 1 &lt;&lt; 5 | 1 &lt;&lt; 6)</default>
+        <default>array(255, 1, 3, 7, 15, 31, 63, 127)</default>
         <docblock line="51">
           <description></description>
           <long-description></long-description>
@@ -174,42 +174,42 @@
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="chdemko\BitArray" line="67" package="BitArray">
+      <property static="false" visibility="private" namespace="chdemko\BitArray" line="58" package="BitArray">
         <name>$data</name>
         <full_name>\chdemko\BitArray\BitArray::data</full_name>
         <default></default>
-        <docblock line="67">
+        <docblock line="58">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="67" description="&lt;p&gt;Underlying data&lt;/p&gt;" type="string" variable="">
+          <tag name="var" line="58" description="&lt;p&gt;Underlying data&lt;/p&gt;" type="string" variable="">
             <type>string</type>
           </tag>
-          <tag name="since" line="67" description="1.0.0"/>
+          <tag name="since" line="58" description="1.0.0"/>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="chdemko\BitArray" line="74" package="BitArray">
+      <property static="false" visibility="private" namespace="chdemko\BitArray" line="65" package="BitArray">
         <name>$size</name>
         <full_name>\chdemko\BitArray\BitArray::size</full_name>
         <default></default>
-        <docblock line="74">
+        <docblock line="65">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="74" description="&lt;p&gt;Size of the bit array&lt;/p&gt;" type="integer" variable="">
+          <tag name="var" line="65" description="&lt;p&gt;Size of the bit array&lt;/p&gt;" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+          <tag name="since" line="65" description="1.0.0"/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="chdemko\BitArray" line="74" package="BitArray">
+        <name>__construct</name>
+        <full_name>\chdemko\BitArray\BitArray::__construct()</full_name>
+        <docblock line="74">
+          <description>Create a new bit array of the given size</description>
+          <long-description></long-description>
+          <tag name="param" line="74" description="&lt;p&gt;The BitArray size&lt;/p&gt;" type="integer" variable="$size">
             <type>integer</type>
           </tag>
           <tag name="since" line="74" description="1.0.0"/>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="chdemko\BitArray" line="83" package="BitArray">
-        <name>__construct</name>
-        <full_name>\chdemko\BitArray\BitArray::__construct()</full_name>
-        <docblock line="83">
-          <description>Create a new bit array of the given size</description>
-          <long-description></long-description>
-          <tag name="param" line="83" description="&lt;p&gt;The BitArray size&lt;/p&gt;" type="integer" variable="$size">
-            <type>integer</type>
-          </tag>
-          <tag name="since" line="83" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$size</name>
@@ -217,46 +217,46 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="96" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="87" package="BitArray">
         <name>__clone</name>
         <full_name>\chdemko\BitArray\BitArray::__clone()</full_name>
-        <docblock line="96">
+        <docblock line="87">
           <description>Clone a bitarray</description>
           <long-description></long-description>
-          <tag name="return" line="96" description="" type="void">
+          <tag name="return" line="87" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="since" line="96" description="1.0.0"/>
+          <tag name="since" line="87" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="108" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="99" package="BitArray">
         <name>__toString</name>
         <full_name>\chdemko\BitArray\BitArray::__toString()</full_name>
-        <docblock line="108">
+        <docblock line="99">
           <description>Convert the object to a string</description>
           <long-description></long-description>
-          <tag name="return" line="108" description="String representation of this object" type="string">
+          <tag name="return" line="99" description="String representation of this object" type="string">
             <type>string</type>
           </tag>
-          <tag name="since" line="108" description="1.0.0"/>
+          <tag name="since" line="99" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="134" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="125" package="BitArray">
         <name>__get</name>
         <full_name>\chdemko\BitArray\BitArray::__get()</full_name>
-        <docblock line="134">
+        <docblock line="125">
           <description>Magic get method</description>
           <long-description></long-description>
-          <tag name="param" line="134" description="&lt;p&gt;The property&lt;/p&gt;" type="string" variable="$property">
+          <tag name="param" line="125" description="&lt;p&gt;The property&lt;/p&gt;" type="string" variable="$property">
             <type>string</type>
           </tag>
-          <tag name="throws" line="134" description="If the property does not exist" type="\RuntimeException">
+          <tag name="throws" line="125" description="If the property does not exist" type="\RuntimeException">
             <type>\RuntimeException</type>
           </tag>
-          <tag name="return" line="134" description="The value associated to the property" type="mixed">
+          <tag name="return" line="125" description="The value associated to the property" type="mixed">
             <type>mixed</type>
           </tag>
-          <tag name="since" line="134" description="1.0.0"/>
+          <tag name="since" line="125" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$property</name>
@@ -264,19 +264,19 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="156" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="147" package="BitArray">
         <name>offsetExists</name>
         <full_name>\chdemko\BitArray\BitArray::offsetExists()</full_name>
-        <docblock line="156">
+        <docblock line="147">
           <description>Test the existence of an index</description>
           <long-description></long-description>
-          <tag name="param" line="156" description="&lt;p&gt;The offset&lt;/p&gt;" type="integer" variable="$offset">
+          <tag name="param" line="147" description="&lt;p&gt;The offset&lt;/p&gt;" type="integer" variable="$offset">
             <type>integer</type>
           </tag>
-          <tag name="return" line="156" description="The truth value" type="boolean">
+          <tag name="return" line="147" description="The truth value" type="boolean">
             <type>boolean</type>
           </tag>
-          <tag name="since" line="156" description="1.0.0"/>
+          <tag name="since" line="147" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$offset</name>
@@ -284,22 +284,22 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="172" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="163" package="BitArray">
         <name>offsetGet</name>
         <full_name>\chdemko\BitArray\BitArray::offsetGet()</full_name>
-        <docblock line="172">
+        <docblock line="163">
           <description>Get the truth value for an index</description>
           <long-description></long-description>
-          <tag name="param" line="172" description="&lt;p&gt;The offset&lt;/p&gt;" type="integer" variable="$offset">
+          <tag name="param" line="163" description="&lt;p&gt;The offset&lt;/p&gt;" type="integer" variable="$offset">
             <type>integer</type>
           </tag>
-          <tag name="return" line="172" description="The truth value" type="boolean">
+          <tag name="return" line="163" description="The truth value" type="boolean">
             <type>boolean</type>
           </tag>
-          <tag name="throw" line="172" description="Argument index must be an positive integer lesser than the size" type="\OutOfRangeException">
+          <tag name="throw" line="163" description="Argument index must be an positive integer lesser than the size" type="\OutOfRangeException">
             <type>\OutOfRangeException</type>
           </tag>
-          <tag name="since" line="172" description="1.0.0"/>
+          <tag name="since" line="163" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$offset</name>
@@ -307,25 +307,25 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="196" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="187" package="BitArray">
         <name>offsetSet</name>
         <full_name>\chdemko\BitArray\BitArray::offsetSet()</full_name>
-        <docblock line="196">
+        <docblock line="187">
           <description>Set the truth value for an index</description>
           <long-description></long-description>
-          <tag name="param" line="196" description="&lt;p&gt;The offset&lt;/p&gt;" type="integer" variable="$offset">
+          <tag name="param" line="187" description="&lt;p&gt;The offset&lt;/p&gt;" type="integer" variable="$offset">
             <type>integer</type>
           </tag>
-          <tag name="param" line="196" description="&lt;p&gt;The truth value&lt;/p&gt;" type="boolean" variable="$value">
+          <tag name="param" line="187" description="&lt;p&gt;The truth value&lt;/p&gt;" type="boolean" variable="$value">
             <type>boolean</type>
           </tag>
-          <tag name="return" line="196" description="" type="void">
+          <tag name="return" line="187" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throw" line="196" description="Argument index must be an positive integer lesser than the size" type="\OutOfRangeException">
+          <tag name="throw" line="187" description="Argument index must be an positive integer lesser than the size" type="\OutOfRangeException">
             <type>\OutOfRangeException</type>
           </tag>
-          <tag name="since" line="196" description="1.0.0"/>
+          <tag name="since" line="187" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$offset</name>
@@ -338,22 +338,22 @@
           <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="228" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="219" package="BitArray">
         <name>offsetUnset</name>
         <full_name>\chdemko\BitArray\BitArray::offsetUnset()</full_name>
-        <docblock line="228">
+        <docblock line="219">
           <description>Unset the existence of an index</description>
           <long-description></long-description>
-          <tag name="param" line="228" description="&lt;p&gt;The index&lt;/p&gt;" type="integer" variable="$offset">
+          <tag name="param" line="219" description="&lt;p&gt;The index&lt;/p&gt;" type="integer" variable="$offset">
             <type>integer</type>
           </tag>
-          <tag name="return" line="228" description="" type="void">
+          <tag name="return" line="219" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throw" line="228" description="Values cannot be unset" type="\RuntimeException">
+          <tag name="throw" line="219" description="Values cannot be unset" type="\RuntimeException">
             <type>\RuntimeException</type>
           </tag>
-          <tag name="since" line="228" description="1.0.0"/>
+          <tag name="since" line="219" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$offset</name>
@@ -361,67 +361,67 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="240" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="231" package="BitArray">
         <name>count</name>
         <full_name>\chdemko\BitArray\BitArray::count()</full_name>
-        <docblock line="240">
+        <docblock line="231">
           <description>Return the number of true bits</description>
           <long-description></long-description>
-          <tag name="return" line="240" description="The number of true bits" type="integer">
+          <tag name="return" line="231" description="The number of true bits" type="integer">
             <type>integer</type>
           </tag>
-          <tag name="since" line="240" description="1.0.0"/>
+          <tag name="since" line="231" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="259" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="250" package="BitArray">
         <name>jsonSerialize</name>
         <full_name>\chdemko\BitArray\BitArray::jsonSerialize()</full_name>
-        <docblock line="259">
+        <docblock line="250">
           <description>Serialize the object</description>
           <long-description></long-description>
-          <tag name="return" line="259" description="Array of values" type="array">
+          <tag name="return" line="250" description="Array of values" type="array">
             <type>array</type>
           </tag>
-          <tag name="since" line="259" description="1.0.0"/>
+          <tag name="since" line="250" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="278" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="269" package="BitArray">
         <name>getIterator</name>
         <full_name>\chdemko\BitArray\BitArray::getIterator()</full_name>
-        <docblock line="278">
+        <docblock line="269">
           <description>Get an iterator</description>
           <long-description></long-description>
-          <tag name="return" line="278" description="Iterator" type="\chdemko\BitArray\Iterator">
+          <tag name="return" line="269" description="Iterator" type="\chdemko\BitArray\Iterator">
             <type>\chdemko\BitArray\Iterator</type>
           </tag>
-          <tag name="since" line="278" description="1.0.0"/>
+          <tag name="since" line="269" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="290" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="281" package="BitArray">
         <name>size</name>
         <full_name>\chdemko\BitArray\BitArray::size()</full_name>
-        <docblock line="290">
+        <docblock line="281">
           <description>Return the size</description>
           <long-description></long-description>
-          <tag name="return" line="290" description="The size" type="integer">
+          <tag name="return" line="281" description="The size" type="integer">
             <type>integer</type>
           </tag>
-          <tag name="since" line="290" description="1.0.0"/>
+          <tag name="since" line="281" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="304" package="BitArray">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="295" package="BitArray">
         <name>fromInteger</name>
         <full_name>\chdemko\BitArray\BitArray::fromInteger()</full_name>
-        <docblock line="304">
+        <docblock line="295">
           <description>Create a new BitArray from an integer</description>
           <long-description></long-description>
-          <tag name="param" line="304" description="&lt;p&gt;Size of the bitarray&lt;/p&gt;" type="integer" variable="$size">
+          <tag name="param" line="295" description="&lt;p&gt;Size of the bitarray&lt;/p&gt;" type="integer" variable="$size">
             <type>integer</type>
           </tag>
-          <tag name="return" line="304" description="A new BitArray" type="\chdemko\BitArray\BitArray">
+          <tag name="return" line="295" description="A new BitArray" type="\chdemko\BitArray\BitArray">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="since" line="304" description="1.0.0"/>
+          <tag name="since" line="295" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$size</name>
@@ -429,19 +429,19 @@
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="318" package="BitArray">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="309" package="BitArray">
         <name>fromTraversable</name>
         <full_name>\chdemko\BitArray\BitArray::fromTraversable()</full_name>
-        <docblock line="318">
+        <docblock line="309">
           <description>Create a new BitArray from a traversable</description>
           <long-description></long-description>
-          <tag name="param" line="318" description="&lt;p&gt;A traversable and countable&lt;/p&gt;" type="\Traversable" variable="$traversable">
+          <tag name="param" line="309" description="&lt;p&gt;A traversable and countable&lt;/p&gt;" type="\Traversable" variable="$traversable">
             <type>\Traversable</type>
           </tag>
-          <tag name="return" line="318" description="A new BitArray" type="\chdemko\BitArray\BitArray">
+          <tag name="return" line="309" description="A new BitArray" type="\chdemko\BitArray\BitArray">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="since" line="318" description="1.0.0"/>
+          <tag name="since" line="309" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$traversable</name>
@@ -449,19 +449,19 @@
           <type>\Traversable</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="357" package="BitArray">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="348" package="BitArray">
         <name>fromString</name>
         <full_name>\chdemko\BitArray\BitArray::fromString()</full_name>
-        <docblock line="357">
+        <docblock line="348">
           <description>Create a new BitArray from a bit string</description>
           <long-description></long-description>
-          <tag name="param" line="357" description="&lt;p&gt;A bit string&lt;/p&gt;" type="string" variable="$string">
+          <tag name="param" line="348" description="&lt;p&gt;A bit string&lt;/p&gt;" type="string" variable="$string">
             <type>string</type>
           </tag>
-          <tag name="return" line="357" description="A new BitArray" type="\chdemko\BitArray\BitArray">
+          <tag name="return" line="348" description="A new BitArray" type="\chdemko\BitArray\BitArray">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="since" line="357" description="1.0.0"/>
+          <tag name="since" line="348" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$string</name>
@@ -469,19 +469,19 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="393" package="BitArray">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="chdemko\BitArray" line="384" package="BitArray">
         <name>fromJson</name>
         <full_name>\chdemko\BitArray\BitArray::fromJson()</full_name>
-        <docblock line="393">
+        <docblock line="384">
           <description>Create a new BitArray from json</description>
           <long-description></long-description>
-          <tag name="param" line="393" description="&lt;p&gt;A json encoded value&lt;/p&gt;" type="string" variable="$json">
+          <tag name="param" line="384" description="&lt;p&gt;A json encoded value&lt;/p&gt;" type="string" variable="$json">
             <type>string</type>
           </tag>
-          <tag name="return" line="393" description="A new BitArray" type="\chdemko\BitArray\BitArray">
+          <tag name="return" line="384" description="A new BitArray" type="\chdemko\BitArray\BitArray">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="since" line="393" description="1.0.0"/>
+          <tag name="since" line="384" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$json</name>
@@ -489,34 +489,34 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="405" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="396" package="BitArray">
         <name>applyComplement</name>
         <full_name>\chdemko\BitArray\BitArray::applyComplement()</full_name>
-        <docblock line="405">
+        <docblock line="396">
           <description>Complement the bit array</description>
           <long-description></long-description>
-          <tag name="return" line="405" description="This object for chaining" type="\chdemko\BitArray\BitArray">
+          <tag name="return" line="396" description="This object for chaining" type="\chdemko\BitArray\BitArray">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="since" line="405" description="1.0.0"/>
+          <tag name="since" line="396" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="434" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="425" package="BitArray">
         <name>applyOr</name>
         <full_name>\chdemko\BitArray\BitArray::applyOr()</full_name>
-        <docblock line="434">
+        <docblock line="425">
           <description>Or with an another bit array</description>
           <long-description></long-description>
-          <tag name="param" line="434" description="&lt;p&gt;A bit array&lt;/p&gt;" type="\chdemko\BitArray\BitArray" variable="$bits">
+          <tag name="param" line="425" description="&lt;p&gt;A bit array&lt;/p&gt;" type="\chdemko\BitArray\BitArray" variable="$bits">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="return" line="434" description="This object for chaining" type="\chdemko\BitArray\BitArray">
+          <tag name="return" line="425" description="This object for chaining" type="\chdemko\BitArray\BitArray">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="throw" line="434" description="Argument must be of equal size" type="\InvalidArgumentException">
+          <tag name="throw" line="425" description="Argument must be of equal size" type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
-          <tag name="since" line="434" description="1.0.0"/>
+          <tag name="since" line="425" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$bits</name>
@@ -524,22 +524,22 @@
           <type>\chdemko\BitArray\BitArray</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="464" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="455" package="BitArray">
         <name>applyAnd</name>
         <full_name>\chdemko\BitArray\BitArray::applyAnd()</full_name>
-        <docblock line="464">
+        <docblock line="455">
           <description>And with an another bit array</description>
           <long-description></long-description>
-          <tag name="param" line="464" description="&lt;p&gt;A bit array&lt;/p&gt;" type="\chdemko\BitArray\BitArray" variable="$bits">
+          <tag name="param" line="455" description="&lt;p&gt;A bit array&lt;/p&gt;" type="\chdemko\BitArray\BitArray" variable="$bits">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="return" line="464" description="This object for chaining" type="\chdemko\BitArray\BitArray">
+          <tag name="return" line="455" description="This object for chaining" type="\chdemko\BitArray\BitArray">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="throw" line="464" description="Argument must be of equal size" type="\InvalidArgumentException">
+          <tag name="throw" line="455" description="Argument must be of equal size" type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
-          <tag name="since" line="464" description="1.0.0"/>
+          <tag name="since" line="455" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$bits</name>
@@ -547,22 +547,22 @@
           <type>\chdemko\BitArray\BitArray</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="494" package="BitArray">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="chdemko\BitArray" line="485" package="BitArray">
         <name>applyXor</name>
         <full_name>\chdemko\BitArray\BitArray::applyXor()</full_name>
-        <docblock line="494">
+        <docblock line="485">
           <description>Xor with an another bit array</description>
           <long-description></long-description>
-          <tag name="param" line="494" description="&lt;p&gt;A bit array&lt;/p&gt;" type="\chdemko\BitArray\BitArray" variable="$bits">
+          <tag name="param" line="485" description="&lt;p&gt;A bit array&lt;/p&gt;" type="\chdemko\BitArray\BitArray" variable="$bits">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="return" line="494" description="This object for chaining" type="\chdemko\BitArray\BitArray">
+          <tag name="return" line="485" description="This object for chaining" type="\chdemko\BitArray\BitArray">
             <type>\chdemko\BitArray\BitArray</type>
           </tag>
-          <tag name="throw" line="494" description="Argument must be of equal size" type="\InvalidArgumentException">
+          <tag name="throw" line="485" description="Argument must be of equal size" type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
-          <tag name="since" line="494" description="1.0.0"/>
+          <tag name="since" line="485" description="1.0.0"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$bits</name>
@@ -571,7 +571,7 @@
         </argument>
       </method>
     </class>
-    <source>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</source>
+    <source>eJzlWXtvG0UQ/9v+FAMK8blNYifQFrVJwQ2oCipUagJCSkK0vlvb257vzN06aQrlszOzr9t72LHbUAWILHvvdnZ25jePnZ3sfzObzNrt3r17bbgH4STi0zfp2TMhB1nGrt0AwpjlOZIQ1bdsLidpBvR3OMlELtPZhMN3tBT2DY9vx1Mm4p0wnT5Va8J0dp2J8UTiGjcMDruw19/d28avhzVeOzCIY1CUOWQ859klj3asELEIeZJzEmIi5exxr3d1dbUT8lDE8Y5IRmlPUYQ8773Qg4tDfnj04sX2s4tfdrd5sjOR0xhOcDf9Hp6B4Wm2OJmIHEYi5oC/M5ZJSEcgkR4h2x4KyRQyMxa+YWOuhMhRirGQk/mQFO8ZKHo+PTLuId49VBExzXgNc0jYlOfIlbfdqEb0xJlMr0HBcANnICsTWHp6q2ZygUAQZrs7/Z2+EkaZ1lGCmM5iPuUJYn6m3gxCxDDfgrPDdJ5INow5jo8kz5hMs8F4nPExk/TuhzxNjnkmWCzeEVn7j3aLpGzRxpcMHUYkko95dnoO8NN8OuSZFRxG6E+chRO4ZPGcw5DLK84T6ANLIth78ICY9NqtWSYucTPIJZMihI2QRIIDOG23Wv0t2FWfPfuNny/LY/2Nn6+2cMWCmdJYf+PnwYetWDBTGutv/Dz8VHusv2LBTGmsv/Hz6L+kx6fYY/0VC2ZKY/2Nn6/brXNMGYuj8UeWv1ExiGlWZiKUIhkDpjCbChaEn6WmCMQgVbH2pdpxlwDCp4cUgHuPGnbHP1qM+8DPScSz+JrGEZOMiDShzVY6WZVl2CDSRrZGL4Bj8Y7bnI1ZBnQCXo17jmt97ocZp/cMEn5VMLPcx+ISsxWtKdjjicGmvjiKJ6gTx2Xb8pJmiVLJQ8kjGM0TNEyawMVFmCYI3jyUgWLabbcw17Y2JJ5Y20/VNgcQ4MZdq4ibJNRwEldfZHyGOgWfn/U/34KQizjwGfTg624XF773QYjThDBwh5mTPONyniUAl6mIbtBnPsRjtqQMcQ3KOtTF9CbQpWqSpcklxxOajJEOXyNgIFOUVLtYXU7resf6F/egAiMhv0aZlFXx0Nec1tVHppqrU8lsVlKn0+9sgYd3l5ytRSEYbKSjUc4pqPpPwD7s+8Tu9f37uIfapCVGEKRZ5ON0ql3AMSSTnndhE4Jd2N93rL8gSxMLxceKe2qmz1GOzm6HXAgRbynUWwZGQ1qxxY9sjICMkfOUY6EY1UPCor+Bzj1Ds13rqLBPxQI5ydKrHODsFZ7zYsq/fxvymYIZjkwtZjlEKc8hSSXwt1hF1i0+FW8xhtQ+usbAqicNBaPIQleRjfuvZnBUNXCqGKPnV0JiOVN6rwEOGVatHTJj57EC3ILp2begUxVOI6GaCbqKNuIjNo+lJlOgqTxVgy3oUK4diQSVtoJ1FIv3ZRueYGZXmCg0qXqmoGAJZrOIv12W5IxTKaD1uG6LYZrGHJkpIsxj0tR96wGvuX9PAubWxw36ZiORX6Bgbg42N518TzG6/Of9Cv4+GM+5xsKTVB2Wnw4ObVKMg5dz+XL0iiVjPxQG2XhOx7SWBqZztN2Qk3izNBcSzyYnUIylPP7ICU6SSiucP42oP+eyAjnlHwNho2Gc/xutA9K6+1E5y/hti8d4ZzPcPedvwCroOKwMIwfWalg1BsvxrftHQel8Y0PzXeIkzWfwnXOd48J1toxW67rQhpbW1jglZ1HnqGZlebuTzXMzzYIOt3CS1ZzQzHbhz0V+pxzPet6H89+Ev5Zt8MHeXTHnRzj3z0nOb+EoqBDf4Kv14/4XsmUOIUvojEed5kkpl67uf0qhSvJaemQ2b92plqCvtEqEVOKaGxioXLdmaqo7nE5uWrGKbqYaMBWn7Yv0vapS0DNGXMyTMSYPVY3i2PfLLhaWgo5CTUNPXoVpuN7HlTwePX6sn0/rvn3ePX9SrRQV7ZNq3tTNIu6V7XWc9EWraHSpqF4Tnddea6q4amjOeHc9/9jiW7M6pXC/tXPNA4/pnl+tKKEgNI24Om62RVeM1sMMq1q7MCiXVRQnbkrpuCQWysdEo/Ovf5Lknhkby+fS3dC/urub9yhLpzqLKUluvrdXugkLLsCOPwxK+62kn+mrODVJxiMtRumi79nB8jfza6iOmYbhnTlXrdqa9mcnxSxCIP2ngb9UdWhD2xr+BIB4ggW+XDaqVT/5oAyOzo4lahVlfrSrxyzys6bqSJeW4a2xqFmKi3e91CBOfx5ANbjNye7WFTNwcHAAj3wWpMiS5GFKC9pJFwye+G4Tl6pcTqlu+xlu2y8S2ZqbltIUrV3HAamNVm3Q1FoEdjBoJP/HvMy0cMz2y3zLHqOGstvkSIvPFY33sqZOrR9DFuv0O3fM2+6ae9GRv8StaJqcRf1iUZtGPFp0obp156L/lAVKhHJC13VVNckR3UXESUSzqN79tJ36Rb3uuionRYNTXVbDCRNJKbZWOYjZbBZfF9u70mppkVmpSZcXneXK0jjIX9BUdRYu0+thCTJN8b4zR0zxqmMqau2eRrinvmP6rMz8NuwuvL95JFTEmYLY/j/k1G+kYxSc152ZCCpWfJnBlUCmWJQwvGlMsPZosKT15MKSOiuZBHkLdne3sKMEA0JE9lLZ1DawN0ysi/jvcxZ/QC2nXOhlFjgRlT71loD+t8aBnzIL893ob6s4XOM1fvEVXrUH1Gsvqzk/NHm3Yu9lN/pFcHvX+ka4G6/tA6zK/rfehMr/K91p886606/p/zg5ofL/Snf67Y650/v23+jAy+U=</source>
   </file>
   <package name="BitArray" full_name="BitArray"/>
   <package name="Default" full_name="Default"/>
