@@ -71,8 +71,10 @@
 <li class="method public "><a href="#method_applyOr" title="applyOr() :: Or with an another bit array"><span class="description">Or with an another bit array</span><pre>applyOr()</pre></a></li>
 <li class="method public "><a href="#method_applyXor" title="applyXor() :: Xor with an another bit array"><span class="description">Xor with an another bit array</span><pre>applyXor()</pre></a></li>
 <li class="method public "><a href="#method_count" title="count() :: Return the number of true bits"><span class="description">Return the number of true bits</span><pre>count()</pre></a></li>
+<li class="method public "><a href="#method_fromConcat" title="fromConcat() :: Create a new BitArray using the concat operation"><span class="description">Create a new BitArray using the concat operation</span><pre>fromConcat()</pre></a></li>
 <li class="method public "><a href="#method_fromInteger" title="fromInteger() :: Create a new BitArray from an integer"><span class="description">Create a new BitArray from an integer</span><pre>fromInteger()</pre></a></li>
 <li class="method public "><a href="#method_fromJson" title="fromJson() :: Create a new BitArray from json"><span class="description">Create a new BitArray from json</span><pre>fromJson()</pre></a></li>
+<li class="method public "><a href="#method_fromSlice" title="fromSlice() :: Create a new BitArray using a slice"><span class="description">Create a new BitArray using a slice</span><pre>fromSlice()</pre></a></li>
 <li class="method public "><a href="#method_fromString" title="fromString() :: Create a new BitArray from a bit string"><span class="description">Create a new BitArray from a bit string</span><pre>fromString()</pre></a></li>
 <li class="method public "><a href="#method_fromTraversable" title="fromTraversable() :: Create a new BitArray from a traversable"><span class="description">Create a new BitArray from a traversable</span><pre>fromTraversable()</pre></a></li>
 <li class="method public "><a href="#method_getIterator" title="getIterator() :: Get an iterator"><span class="description">Get an iterator</span><pre>getIterator()</pre></a></li>
@@ -82,6 +84,7 @@
 <li class="method public "><a href="#method_offsetSet" title="offsetSet() :: Set the truth value for an index"><span class="description">Set the truth value for an index</span><pre>offsetSet()</pre></a></li>
 <li class="method public "><a href="#method_offsetUnset" title="offsetUnset() :: Unset the existence of an index"><span class="description">Unset the existence of an index</span><pre>offsetUnset()</pre></a></li>
 <li class="method public "><a href="#method_size" title="size() :: Return the size"><span class="description">Return the size</span><pre>size()</pre></a></li>
+<li class="method public "><a href="#method_toArray" title="toArray() :: Transform the object to an array"><span class="description">Transform the object to an array</span><pre>toArray()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header protected">» Protected
@@ -277,6 +280,28 @@
 <code>integer</code>The number of true bits</div>
 </div></div>
 </div>
+<a id="method_fromConcat"></a><div class="element clickable method public method_fromConcat " data-toggle="collapse" data-target=".method_fromConcat .collapse" title="public">
+<h2>Create a new BitArray using the concat operation</h2>
+<pre>fromConcat(\chdemko\BitArray\BitArray $bits1, \chdemko\BitArray\BitArray $bits2) : \chdemko\BitArray\BitArray</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$bits1</h4>
+<code>\chdemko\BitArray\BitArray</code><p>A bitarray</p></div>
+<div class="subelement argument">
+<h4>$bits2</h4>
+<code>\chdemko\BitArray\BitArray</code><p>A bitarray</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
+</div></div>
+</div>
 <a id="method_fromInteger"></a><div class="element clickable method public method_fromInteger " data-toggle="collapse" data-target=".method_fromInteger .collapse" title="public">
 <h2>Create a new BitArray from an integer</h2>
 <pre>fromInteger(integer $size) : \chdemko\BitArray\BitArray</pre>
@@ -310,6 +335,35 @@
 <div class="subelement argument">
 <h4>$json</h4>
 <code>string</code><p>A json encoded value</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
+</div></div>
+</div>
+<a id="method_fromSlice"></a><div class="element clickable method public method_fromSlice " data-toggle="collapse" data-target=".method_fromSlice .collapse" title="public">
+<h2>Create a new BitArray using a slice</h2>
+<pre>fromSlice(\chdemko\BitArray\BitArray $bits, integer $offset<code> = 0</code>, mixed $size<code> = null</code>) : \chdemko\BitArray\BitArray</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$bits</h4>
+<code>\chdemko\BitArray\BitArray</code><p>A bitarray to get the slice</p></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>integer</code><p>If offset is non-negative, the slice will start at that offset in the bits argument.
+If offset is negative, the slice will start that far from the end of the bits argument.</p></div>
+<div class="subelement argument">
+<h4>$size</h4>
+<code>mixed</code><p>If size is given and is positive, then the slice will have up to that many elements in it.
+                            If the bits argument is shorter than the size, then only the available elements will be present.
+                            If size is given and is negative then the slice will stop that many elements from the end of the bits argument.
+                            If it is omitted, then the slice will have everything from offset up until the end of the bits argument.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
@@ -477,6 +531,21 @@
 <code>integer</code>The size</div>
 </div></div>
 </div>
+<a id="method_toArray"></a><div class="element clickable method public method_toArray " data-toggle="collapse" data-target=".method_toArray .collapse" title="public">
+<h2>Transform the object to an array</h2>
+<pre>toArray() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.1.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array of values</div>
+</div></div>
+</div>
 <a id="method___construct"></a><div class="element clickable method protected method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="protected">
 <h2>Create a new bit array of the given size</h2>
 <pre>__construct(integer $size) </pre>
@@ -598,7 +667,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2016-11-24T10:05:37Z.<br></footer></div>
+            generated on 2016-11-28T10:50:36Z.<br></footer></div>
 </div>
 </body>
 </html>
