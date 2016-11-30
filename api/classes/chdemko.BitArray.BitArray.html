@@ -63,14 +63,16 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method___clone" title="__clone() :: Clone a bitarray"><span class="description">Clone a bitarray</span><pre>__clone()</pre></a></li>
+<li class="method public "><a href="#method___clone" title="__clone() :: Clone a BitArray"><span class="description">Clone a BitArray</span><pre>__clone()</pre></a></li>
 <li class="method public "><a href="#method___get" title="__get() :: Magic get method"><span class="description">Magic get method</span><pre>__get()</pre></a></li>
 <li class="method public "><a href="#method___toString" title="__toString() :: Convert the object to a string"><span class="description">Convert the object to a string</span><pre>__toString()</pre></a></li>
 <li class="method public "><a href="#method_applyAnd" title="applyAnd() :: And with an another bit array"><span class="description">And with an another bit array</span><pre>applyAnd()</pre></a></li>
 <li class="method public "><a href="#method_applyComplement" title="applyComplement() :: Complement the bit array"><span class="description">Complement the bit array</span><pre>applyComplement()</pre></a></li>
 <li class="method public "><a href="#method_applyOr" title="applyOr() :: Or with an another bit array"><span class="description">Or with an another bit array</span><pre>applyOr()</pre></a></li>
 <li class="method public "><a href="#method_applyXor" title="applyXor() :: Xor with an another bit array"><span class="description">Xor with an another bit array</span><pre>applyXor()</pre></a></li>
+<li class="method public "><a href="#method_copy" title="copy() :: Copy bits from a BitArray"><span class="description">Copy bits from a BitArray</span><pre>copy()</pre></a></li>
 <li class="method public "><a href="#method_count" title="count() :: Return the number of true bits"><span class="description">Return the number of true bits</span><pre>count()</pre></a></li>
+<li class="method public "><a href="#method_directCopy" title="directCopy() :: Copy bits directly from a BitArray"><span class="description">Copy bits directly from a BitArray</span><pre>directCopy()</pre></a></li>
 <li class="method public "><a href="#method_fromConcat" title="fromConcat() :: Create a new BitArray using the concat operation"><span class="description">Create a new BitArray using the concat operation</span><pre>fromConcat()</pre></a></li>
 <li class="method public "><a href="#method_fromInteger" title="fromInteger() :: Create a new BitArray from an integer"><span class="description">Create a new BitArray from an integer</span><pre>fromInteger()</pre></a></li>
 <li class="method public "><a href="#method_fromJson" title="fromJson() :: Create a new BitArray from json"><span class="description">Create a new BitArray from json</span><pre>fromJson()</pre></a></li>
@@ -88,7 +90,11 @@
 </ul>
 </li>
 <li class="nav-header protected">» Protected
-                    <ul><li class="method protected "><a href="#method___construct" title="__construct() :: Create a new bit array of the given size"><span class="description">Create a new bit array of the given size</span><pre>__construct()</pre></a></li></ul>
+                    <ul>
+<li class="method protected "><a href="#method___construct" title="__construct() :: Create a new bit array of the given size"><span class="description">Create a new bit array of the given size</span><pre>__construct()</pre></a></li>
+<li class="method protected "><a href="#method_getRealOffset" title="getRealOffset() :: Get the real offset using a positive or negative offset"><span class="description">Get the real offset using a positive or negative offset</span><pre>getRealOffset()</pre></a></li>
+<li class="method protected "><a href="#method_getRealSize" title="getRealSize() :: Get the real offset using a positive or negative offset"><span class="description">Get the real offset using a positive or negative offset</span><pre>getRealSize()</pre></a></li>
+</ul>
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
@@ -137,7 +143,7 @@
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___clone"></a><div class="element clickable method public method___clone " data-toggle="collapse" data-target=".method___clone .collapse" title="public">
-<h2>Clone a bitarray</h2>
+<h2>Clone a BitArray</h2>
 <pre>__clone() : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -265,6 +271,42 @@
 <code>\chdemko\BitArray\BitArray</code>This object for chaining</div>
 </div></div>
 </div>
+<a id="method_copy"></a><div class="element clickable method public method_copy " data-toggle="collapse" data-target=".method_copy .collapse" title="public">
+<h2>Copy bits from a BitArray</h2>
+<pre>copy(\chdemko\BitArray\BitArray $bits, integer $index<code> = 0</code>, integer $offset<code> = 0</code>, mixed $size<code> = null</code>) : \chdemko\BitArray\BitArray</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$bits</h4>
+<code>\chdemko\BitArray\BitArray</code><p>A BitArray to copy</p></div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code><p>Starting index for destination.
+If index is non-negative, the index parameter is used as it is, keeping its real value between 0 and size-1.
+If index is negative, the index parameter starts from the end, keeping its real value between 0 and size-1.</p></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>integer</code><p>Starting index for copying.
+If offset is non-negative, the offset parameter is used as it is, keeping its positive value between 0 and size-1.
+If offset is negative, the offset parameter starts from the end, keeping its real value between 0 and size-1.</p></div>
+<div class="subelement argument">
+<h4>$size</h4>
+<code>mixed</code><p>Copy size.
+                            If size is given and is positive, then the copy will copy size elements.
+                            If the bits argument is shorter than the size, then only the available elements will be copied.
+                            If size is given and is negative then the copy starts from the end.
+                            If it is omitted, then the copy will have everything from offset up until the end of the bits argument.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\BitArray\BitArray</code>This object for chaining</div>
+</div></div>
+</div>
 <a id="method_count"></a><div class="element clickable method public method_count " data-toggle="collapse" data-target=".method_count .collapse" title="public">
 <h2>Return the number of true bits</h2>
 <pre>count() : integer</pre>
@@ -280,6 +322,36 @@
 <code>integer</code>The number of true bits</div>
 </div></div>
 </div>
+<a id="method_directCopy"></a><div class="element clickable method public method_directCopy " data-toggle="collapse" data-target=".method_directCopy .collapse" title="public">
+<h2>Copy bits directly from a BitArray</h2>
+<pre>directCopy(\chdemko\BitArray\BitArray $bits, integer $index<code> = 0</code>, integer $offset<code> = 0</code>, integer $size<code> = 0</code>) : \chdemko\BitArray\BitArray</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$bits</h4>
+<code>\chdemko\BitArray\BitArray</code><p>A BitArray to copy</p></div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code><p>Starting index for destination</p></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>integer</code><p>Starting index for copying</p></div>
+<div class="subelement argument">
+<h4>$size</h4>
+<code>integer</code><p>Copy size</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\BitArray\BitArray</code>This object for chaining</div>
+</div></div>
+</div>
 <a id="method_fromConcat"></a><div class="element clickable method public method_fromConcat " data-toggle="collapse" data-target=".method_fromConcat .collapse" title="public">
 <h2>Create a new BitArray using the concat operation</h2>
 <pre>fromConcat(\chdemko\BitArray\BitArray $bits1, \chdemko\BitArray\BitArray $bits2) : \chdemko\BitArray\BitArray</pre>
@@ -293,10 +365,10 @@
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$bits1</h4>
-<code>\chdemko\BitArray\BitArray</code><p>A bitarray</p></div>
+<code>\chdemko\BitArray\BitArray</code><p>A BitArray</p></div>
 <div class="subelement argument">
 <h4>$bits2</h4>
-<code>\chdemko\BitArray\BitArray</code><p>A bitarray</p></div>
+<code>\chdemko\BitArray\BitArray</code><p>A BitArray</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
@@ -315,7 +387,7 @@
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$size</h4>
-<code>integer</code><p>Size of the bitarray</p></div>
+<code>integer</code><p>Size of the BitArray</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
@@ -353,11 +425,11 @@
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$bits</h4>
-<code>\chdemko\BitArray\BitArray</code><p>A bitarray to get the slice</p></div>
+<code>\chdemko\BitArray\BitArray</code><p>A BitArray to get the slice</p></div>
 <div class="subelement argument">
 <h4>$offset</h4>
 <code>integer</code><p>If offset is non-negative, the slice will start at that offset in the bits argument.
-If offset is negative, the slice will start that far from the end of the bits argument.</p></div>
+If offset is negative, the slice will start from the end of the bits argument.</p></div>
 <div class="subelement argument">
 <h4>$size</h4>
 <code>mixed</code><p>If size is given and is positive, then the slice will have up to that many elements in it.
@@ -562,6 +634,50 @@ If offset is negative, the slice will start that far from the end of the bits ar
 <code>integer</code><p>The BitArray size</p></div>
 </div></div>
 </div>
+<a id="method_getRealOffset"></a><div class="element clickable method protected method_getRealOffset " data-toggle="collapse" data-target=".method_getRealOffset .collapse" title="protected">
+<h2>Get the real offset using a positive or negative offset</h2>
+<pre>getRealOffset(integer $offset) : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>integer</code><p>If offset is non-negative, the offset parameter is used as it is, keeping its real value between 0 and size-1.
+If offset is negative, the offset parameter starts from the end, keeping its real value between 0 and size-1.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>The real offset</div>
+</div></div>
+</div>
+<a id="method_getRealSize"></a><div class="element clickable method protected method_getRealSize " data-toggle="collapse" data-target=".method_getRealSize .collapse" title="protected">
+<h2>Get the real offset using a positive or negative offset</h2>
+<pre>getRealSize(integer $offset, mixed $size) : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>integer</code><p>The real offset.</p></div>
+<div class="subelement argument">
+<h4>$size</h4>
+<code>mixed</code><p>If size is given and is positive, then the real size will be between 0 and the current size-1.
+If size is given and is negative then the real size starts from the end.
+If it is omitted, then the size goes until the end of the BitArray.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>The real size</div>
+</div></div>
+</div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_count"> </a><div class="element clickable property public property_count" data-toggle="collapse" data-target=".property_count .collapse" title="public">
@@ -667,7 +783,7 @@ If offset is negative, the slice will start that far from the end of the bits ar
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2016-11-28T11:07:50Z.<br></footer></div>
+            generated on 2016-11-30T13:55:57Z.<br></footer></div>
 </div>
 </body>
 </html>
