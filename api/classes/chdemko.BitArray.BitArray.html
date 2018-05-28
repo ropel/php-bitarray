@@ -74,6 +74,7 @@
 <li class="method public "><a href="#method_count" title="count() :: Return the number of true bits"><span class="description">Return the number of true bits</span><pre>count()</pre></a></li>
 <li class="method public "><a href="#method_directCopy" title="directCopy() :: Copy bits directly from a BitArray"><span class="description">Copy bits directly from a BitArray</span><pre>directCopy()</pre></a></li>
 <li class="method public "><a href="#method_fromConcat" title="fromConcat() :: Create a new BitArray using the concat operation"><span class="description">Create a new BitArray using the concat operation</span><pre>fromConcat()</pre></a></li>
+<li class="method public "><a href="#method_fromDecimal" title="fromDecimal() :: Create a new BitArray from a sequence of bits."><span class="description">Create a new BitArray from a sequence of bits.</span><pre>fromDecimal()</pre></a></li>
 <li class="method public "><a href="#method_fromInteger" title="fromInteger() :: Create a new BitArray from an integer"><span class="description">Create a new BitArray from an integer</span><pre>fromInteger()</pre></a></li>
 <li class="method public "><a href="#method_fromJson" title="fromJson() :: Create a new BitArray from json"><span class="description">Create a new BitArray from json</span><pre>fromJson()</pre></a></li>
 <li class="method public "><a href="#method_fromSlice" title="fromSlice() :: Create a new BitArray using a slice"><span class="description">Create a new BitArray using a slice</span><pre>fromSlice()</pre></a></li>
@@ -85,6 +86,7 @@
 <li class="method public "><a href="#method_offsetGet" title="offsetGet() :: Get the truth value for an index"><span class="description">Get the truth value for an index</span><pre>offsetGet()</pre></a></li>
 <li class="method public "><a href="#method_offsetSet" title="offsetSet() :: Set the truth value for an index"><span class="description">Set the truth value for an index</span><pre>offsetSet()</pre></a></li>
 <li class="method public "><a href="#method_offsetUnset" title="offsetUnset() :: Unset the existence of an index"><span class="description">Unset the existence of an index</span><pre>offsetUnset()</pre></a></li>
+<li class="method public "><a href="#method_shift" title="shift() :: Shift a bit array."><span class="description">Shift a bit array.</span><pre>shift()</pre></a></li>
 <li class="method public "><a href="#method_size" title="size() :: Return the size"><span class="description">Return the size</span><pre>size()</pre></a></li>
 <li class="method public "><a href="#method_toArray" title="toArray() :: Transform the object to an array"><span class="description">Transform the object to an array</span><pre>toArray()</pre></a></li>
 </ul>
@@ -94,6 +96,7 @@
 <li class="method protected "><a href="#method___construct" title="__construct() :: Create a new bit array of the given size"><span class="description">Create a new bit array of the given size</span><pre>__construct()</pre></a></li>
 <li class="method protected "><a href="#method_getRealOffset" title="getRealOffset() :: Get the real offset using a positive or negative offset"><span class="description">Get the real offset using a positive or negative offset</span><pre>getRealOffset()</pre></a></li>
 <li class="method protected "><a href="#method_getRealSize" title="getRealSize() :: Get the real offset using a positive or negative offset"><span class="description">Get the real offset using a positive or negative offset</span><pre>getRealSize()</pre></a></li>
+<li class="method protected "><a href="#method_restrict" title="restrict() :: Remove useless bits for simplifying count operation."><span class="description">Remove useless bits for simplifying count operation.</span><pre>restrict()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -107,6 +110,7 @@
                     <ul>
 <li class="property private "><a href="#property_count" title="$count() :: "><span class="description">Number of bits for each value between 0 and 255</span><pre>$count</pre></a></li>
 <li class="property private "><a href="#property_data" title="$data() :: "><span class="description">Underlying data</span><pre>$data</pre></a></li>
+<li class="property private "><a href="#property_empty" title="$empty() :: "><span class="description">Empty bit array</span><pre>$empty</pre></a></li>
 <li class="property private "><a href="#property_restrict" title="$restrict() :: "><span class="description">Mask for restricting complements</span><pre>$restrict</pre></a></li>
 <li class="property private "><a href="#property_size" title="$size() :: "><span class="description">Size of the bit array</span><pre>$size</pre></a></li>
 </ul>
@@ -374,9 +378,31 @@ If offset is negative, the offset parameter starts from the end, keeping its rea
 <code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
 </div></div>
 </div>
+<a id="method_fromDecimal"></a><div class="element clickable method public method_fromDecimal " data-toggle="collapse" data-target=".method_fromDecimal .collapse" title="public">
+<h2>Create a new BitArray from a sequence of bits.</h2>
+<pre>fromDecimal(integer $size, integer $values<code> = 0</code>) : \chdemko\BitArray\BitArray</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$size</h4>
+<code>integer</code><p>Size of the BitArray</p></div>
+<div class="subelement argument">
+<h4>$values</h4>
+<code>integer</code><p>The values for the bits</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
+</div></div>
+</div>
 <a id="method_fromInteger"></a><div class="element clickable method public method_fromInteger " data-toggle="collapse" data-target=".method_fromInteger .collapse" title="public">
 <h2>Create a new BitArray from an integer</h2>
-<pre>fromInteger(integer $size) : \chdemko\BitArray\BitArray</pre>
+<pre>fromInteger(integer $size, boolean $default<code> = false</code>) : \chdemko\BitArray\BitArray</pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -388,6 +414,9 @@ If offset is negative, the offset parameter starts from the end, keeping its rea
 <div class="subelement argument">
 <h4>$size</h4>
 <code>integer</code><p>Size of the BitArray</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>boolean</code><p>The default value for bits</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>\chdemko\BitArray\BitArray</code>A new BitArray</div>
@@ -588,6 +617,30 @@ If offset is negative, the slice will start from the end of the bits argument.</
 <table class="table table-bordered"></table>
 </div></div>
 </div>
+<a id="method_shift"></a><div class="element clickable method public method_shift " data-toggle="collapse" data-target=".method_shift .collapse" title="public">
+<h2>Shift a bit array.</h2>
+<pre>shift(integer $size<code> = 1</code>, boolean $value<code> = false</code>) : \chdemko\BitArray\BitArray</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$size</h4>
+<code>integer</code><p>Size to shift.
+                           Negative value means the shifting is done right to left while
+                           positive value means the shifting is done left to right.</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>boolean</code><p>Value to shift</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\BitArray\BitArray</code>$this for chaining</div>
+</div></div>
+</div>
 <a id="method_size"></a><div class="element clickable method public method_size " data-toggle="collapse" data-target=".method_size .collapse" title="public">
 <h2>Return the size</h2>
 <pre>size() : integer</pre>
@@ -620,7 +673,7 @@ If offset is negative, the slice will start from the end of the bits argument.</
 </div>
 <a id="method___construct"></a><div class="element clickable method protected method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="protected">
 <h2>Create a new bit array of the given size</h2>
-<pre>__construct(integer $size) </pre>
+<pre>__construct(integer $size<code> = 0</code>, boolean $default<code> = false</code>) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -632,6 +685,9 @@ If offset is negative, the slice will start from the end of the bits argument.</
 <div class="subelement argument">
 <h4>$size</h4>
 <code>integer</code><p>The BitArray size</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>boolean</code><p>The default value for bits</p></div>
 </div></div>
 </div>
 <a id="method_getRealOffset"></a><div class="element clickable method protected method_getRealOffset " data-toggle="collapse" data-target=".method_getRealOffset .collapse" title="protected">
@@ -676,6 +732,21 @@ If it is omitted, then the size goes until the end of the BitArray.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>integer</code>The real size</div>
+</div></div>
+</div>
+<a id="method_restrict"></a><div class="element clickable method protected method_restrict " data-toggle="collapse" data-target=".method_restrict .collapse" title="protected">
+<h2>Remove useless bits for simplifying count operation.</h2>
+<pre>restrict() : \chdemko\BitArray\BitArray</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.2.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\chdemko\BitArray\BitArray</code>$this for chaining</div>
 </div></div>
 </div>
 <h3>
@@ -750,6 +821,16 @@ If it is omitted, then the size goes until the end of the BitArray.</p></div>
 </tr></table>
 </div></div>
 </div>
+<a id="property_empty"> </a><div class="element clickable property private property_empty" data-toggle="collapse" data-target=".property_empty .collapse" title="private">
+<h2>Empty bit array</h2>
+<pre>$empty : \chdemko\BitArray\BitArray</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_restrict"> </a><div class="element clickable property private property_restrict" data-toggle="collapse" data-target=".property_restrict .collapse" title="private">
 <h2>Mask for restricting complements</h2>
 <pre>$restrict : array&lt;mixed,integer&gt;</pre>
@@ -783,7 +864,7 @@ If it is omitted, then the size goes until the end of the BitArray.</p></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2016-12-09T10:08:40Z.<br></footer></div>
+            generated on 2018-05-28T14:27:40Z.<br></footer></div>
 </div>
 </body>
 </html>
