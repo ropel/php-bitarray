@@ -208,7 +208,8 @@ class BitArray implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonSer
 			throw new \OutOfRangeException('Argument offset must be a positive integer lesser than the size');
 		}
 	}
-
+	
+	
 	/**
 	 * Set the truth value for an index
 	 *
@@ -800,5 +801,53 @@ class BitArray implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonSer
 		}
 
 		return $this;
+	}
+
+
+	/**
+	 * Returns the index of the first bit that is set to true that occurs on or after the specified starting index. If no such bit exists then -1 is returned.
+	 *
+	 * @param   integer  $offset  The offset
+	 *
+	 * @return  boolean  The truth value
+	 *
+	 * @throw   \OutOfRangeException  Argument index must be an positive integer lesser than the size
+	 *
+	 * @since   1.0.0
+	 */
+	public function nextSetBit($offset)
+	{
+		if ($this->offsetExists($offset))
+		{
+			$ret = $offset;
+			while(( $ret % 8 )!=0)
+			{
+				if($this[$ret])
+					return $ret;
+				else
+					$ret++;
+			}
+			if (!$this->offsetExists($ret))
+				return -1;
+			while($this->data[(int) ($ret / 8)]==chr(0))
+			{
+				//echo "$ret - " . $this->data[(int) ($ret / 8)] . " !\n";
+				$ret += 8;
+				if (!$this->offsetExists($ret))
+					return -2;
+			}
+			while($ret < $this->size)
+			{
+				if($this[$ret])
+					return $ret;
+				else
+					$ret++;
+			}
+			return -3;
+		}
+		else
+		{
+			throw new \OutOfRangeException('Argument offset must be a positive integer lesser than the size');
+		}
 	}
 }

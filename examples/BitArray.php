@@ -13,7 +13,9 @@
  * This file is part of the php-bitarray package https://github.com/chdemko/php-bitarray
  */
 
-require __DIR__ . '/../vendor/autoload.php';
+//require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/BitArray/BitArray.php';
+require __DIR__ . '/../src/BitArray/Iterator.php';
 
 use chdemko\BitArray\BitArray;
 
@@ -43,3 +45,15 @@ echo PHP_EOL;
 
 // Print [true,true,true,false,true]
 echo json_encode($bits) . PHP_EOL;
+
+// Print 14
+$bits = BitArray::fromString('1100000000000010');
+echo $bits->nextSetBit(4) . PHP_EOL;
+
+// print 3 to 30
+for($i = 2;$i < 30; $i++)
+{
+	$str = str_pad('10',$i,'0');
+	$bits = BitArray::fromString($str . '100');
+	echo $str . " -- " . $bits->nextSetBit(2) . PHP_EOL;
+}
